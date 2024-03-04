@@ -130,7 +130,7 @@ body{
     width: 125%;
 }
 
-/*  circle following cursor code */
+ /* circle following cursor code
 #cursor {
     position: fixed;
     top: -5px;
@@ -156,5 +156,5 @@ body{
     transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
       height 0.15s ease-out, background-color 0.15s ease-out;
     z-index: 999;
-  }
+  } */
   
