@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body{
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background: radial-gradient(190.3% 189.74% at -15.5% -42.84%, #E2B9E8 3.64%, #736BD6 47.96%, #8BDCFF 80.68%, #BBE7DC 97.36%); */
+    font-family: 'italiana', serif;
+    color: white;
+    animation: gradientChange 15s alternate-reverse infinite;
+}
+
+/* create a keyframe animation that fades gradients.png into gradients1-16.png for the background*/
+
+@keyframes gradientChange {
+  0% {
+    background-image: url('../media/images/gradients.png');
+  }
+  7% {
+    background-image: url('../media/images/gradients1.png');
+  }
+  14% {
+    background-image: url('../media/images/gradients2.png');
+  }
+  21% {
+    background-image: url('../media/images/gradients3.png');
+  }
+  28% {
+    background-image: url('../media/images/gradients4.png');
+  }
+  35% {
+    background-image: url('../media/images/gradients5.png');
+  }
+  42% {
+    background-image: url('../media/images/gradients6.png');
+  }
+  49% {
+    background-image: url('../media/images/gradients7.png');
+  }
+  56% {
+    background-image: url('../media/images/gradients8.png');
+  }
+  63% {
+    background-image: url('../media/images/gradients9.png');
+  }
+  70% {
+    background-image: url('../media/images/gradients10.png');
+  }
+  77% {
+    background-image: url('../media/images/gradients11.png');
+  }
+  84% {
+    background-image: url('../media/images/gradients12.png');
+  }
+  91% {
+    background-image: url('../media/images/gradients13.png');
+  }
+  98% {
+    background-image: url('../media/images/gradients14.png');
+  }
+  100% {
+    background-image: url('../media/images/gradients15.png');
+  }
+}
+
+
+/* style the go back button */
+#gobackbutton{
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  top: .5vh;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+#gobackbutton button{
+  background-color: transparent;
+  color: white;
+  border:  none;
+  width: 28vw;
+  height: 7vh;
+  font-size: 3.5rem;
+  font-family: 'Italiana', serif;
+  transition: 0.3s ease-out;
+}
+
+#gobackbutton button:hover{
+  color: white;
+  background-color:none;
+  border-color: white;
+  text-shadow: 0 0 2px rgb(214, 214, 214), 0 0 7px white;
+}
+
+#gobackbutton button:active{
+  transform: scale(0.85);
+}
+/*  circle following cursor code */
+/* #cursor {
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+  }
+  
+  #cursor-border {
+    --size: 50px;
+    position: fixed;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px white;
+    pointer-events: none;
+    transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+      height 0.15s ease-out, background-color 0.15s ease-out;
+    z-index: 999;
+  } */
+
+  /* header code */
+  #header {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    position: fixed;
+    top: 1vh;
+    width: 30%;
+    height: 7vh;
+  }
+   
+  .headerButton {
+    background-color: transparent;
+    color: white;
+    padding: 1vh 2vh;
+    border-left: white 1px solid;
+    border-right: white 1px solid;
+    border: white 1px solid;
+    width: 10vw;
+    height: 7vh;
+    font-size: 1.5rem;
+    font-family: 'Italiana', serif;
+    transition: 0.3s ease-out;
+  }
+
+  hr{
+    position: relative;
+    top: -1vh;
+    width: 100vw;
+    border: 2px solid white;
+  }
+
+  #aboutButton:hover {
+    color: white;
+    background-color: #E2B9E8;
+    border-color: white;
+    box-shadow: 0 0 80px #E2B9E8;
+    text-shadow: 0 0 5px rgb(214, 214, 214), 0 0 10px white;
+  }
+  
+  #aboutButton:active {
+    transform: scale(0.85);
+    box-shadow: 0 0 40px #E2B9E8;
+  }
+
+  #portfolioButton:hover {
+    color: white;
+    background-color: #aca6ff;
+    border-color: white;
+    box-shadow: 0 0 80px #aca6ff;
+    text-shadow: 0 0 5px rgb(214, 214, 214), 0 0 10px white;
+  }
+  
+  #portfolioButton:active {
+    transform: scale(0.85);
+    box-shadow: 0 0 40px #aca6ff;
+  }
+
+  #contactButton:hover {
+    color: white;
+    background-color: #b9e4d9;
+    border-color: white;
+    box-shadow: 0 0 80px #BBE7DC;
+    text-shadow: 0 0 5px rgb(214, 214, 214), 0 0 10px white;
+  }
+  
+  #contactButton:active {
+    transform: scale(0.85);
+    box-shadow: 0 0 40px #BBE7DC;
+  }
+
+
+  /* contact form styling */
+/* Style for form elements */
+
+h1 {
+    text-align: center;
+    margin-bottom: 5vh;
+    margin-top: 10vh;
+}
+
+#contactForm {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    left: 38.5vw;
+    /* margin: 0 auto; */
+}
+/* text above each input field */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+/* is calling out the kind of input using [] to call out a specific thing in case you dont have an id for it */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #8BDCFF;
+  color: white;
+  padding: 10px 20px;
+  border-color: white;
+  border-radius: 2vw;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+}
+
+input[type="submit"]:hover{
+  background-color: #BBE7DC;
+}
+input[type="submit"]:active{
+    transform: scale(0.85);
+    box-shadow: 0 0 20px #BBE7DC;
+  }
+
+  h2{
+    text-align: center;
+    margin-top: 5vh;
+  }
+

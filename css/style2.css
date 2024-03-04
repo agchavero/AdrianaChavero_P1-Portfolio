@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body{
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background: radial-gradient(190.3% 189.74% at -15.5% -42.84%, #E2B9E8 3.64%, #736BD6 47.96%, #8BDCFF 80.68%, #BBE7DC 97.36%); */
+  font-family: 'italiana', serif;
+  color: white;
+  animation: gradientChange 20s infinite;
+}
+
+/* create a keyframe animation that fades gradients.png into gradients1.png for the background*/
+
+@keyframes gradientChange {
+0% {
+  background-image: url('../media/images/gradients.png');
+}
+7% {
+  background-image: url('../media/images/gradients1.png');
+}
+14% {
+  background-image: url('../media/images/gradients2.png');
+}
+21% {
+  background-image: url('../media/images/gradients3.png');
+}
+28% {
+  background-image: url('../media/images/gradients4.png');
+}
+35% {
+  background-image: url('../media/images/gradients5.png');
+}
+42% {
+  background-image: url('../media/images/gradients6.png');
+}
+49% {
+  background-image: url('../media/images/gradients7.png');
+}
+56% {
+  background-image: url('../media/images/gradients8.png');
+}
+63% {
+  background-image: url('../media/images/gradients9.png');
+}
+70% {
+  background-image: url('../media/images/gradients10.png');
+}
+77% {
+  background-image: url('../media/images/gradients11.png');
+}
+84% {
+  background-image: url('../media/images/gradients12.png');
+}
+91% {
+  background-image: url('../media/images/gradients13.png');
+}
+98% {
+  background-image: url('../media/images/gradients14.png');
+}
+100% {
+  background-image: url('../media/images/gradients15.png');
+}
+}
+
+
+/* style the go back button */
+  #gobackbutton{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: .5vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+#gobackbutton button{
+    background-color: transparent;
+    color: white;
+    border:  none;
+    width: 28vw;
+    height: 7vh;
+    font-size: 3.5rem;
+    font-family: 'Italiana', serif;
+    transition: 0.3s ease-out;
+}
+
+#gobackbutton button:hover{
+    color: white;
+    background-color:none;
+    border-color: white;
+    text-shadow: 0 0 2px rgb(214, 214, 214), 0 0 7px white;
+}
+
+#gobackbutton button:active{
+    transform: scale(0.85);
+}
+
+/*  circle following cursor code */
+/* #cursor {
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+  }
+  
+  #cursor-border {
+    --size: 50px;
+    position: fixed;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px white;
+    pointer-events: none;
+    transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+      height 0.15s ease-out, background-color 0.15s ease-out;
+    z-index: 999;
+  } */
+
+  /* header code */
+  #header {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    position: fixed;
+    top: 1vh;
+    width: 30%;
+    height: 7vh;
+  }
+   
+  .headerButton {
+    background-color: transparent;
+    color: white;
+    padding: 1vh 2vh;
+    border-left: white 1px solid;
+    border-right: white 1px solid;
+    border: white 1px solid;
+    width: 10vw;
+    height: 7vh;
+    font-size: 1.5rem;
+    font-family: 'Italiana', serif;
+    transition: 0.3s ease-out;
+  }
+
+  hr{
+    position: relative;
+    top: -1vh;
+    width: 100vw;
+    border: 2px solid white;
+  }
+
+  #aboutButton:hover {
+    color: white;
+    background-color: #E2B9E8;
+    border-color: white;
+    box-shadow: 0 0 80px #E2B9E8;
+    text-shadow: 0 0 5px rgb(214, 214, 214), 0 0 10px white;
+  }
+  
+  #aboutButton:active {
+    transform: scale(0.85);
+    box-shadow: 0 0 40px #E2B9E8;
+  }
+
+  #portfolioButton:hover {
+    color: white;
+    background-color: #aca6ff;
+    border-color: white;
+    box-shadow: 0 0 80px #aca6ff;
+    text-shadow: 0 0 5px rgb(214, 214, 214), 0 0 10px white;
+  }
+  
+  #portfolioButton:active {
+    transform: scale(0.85);
+    box-shadow: 0 0 40px #aca6ff;
+  }
+
+  #contactButton:hover {
+    color: white;
+    background-color: #b9e4d9;
+    border-color: white;
+    box-shadow: 0 0 80px #BBE7DC;
+    text-shadow: 0 0 5px rgb(214, 214, 214), 0 0 10px white;
+  }
+  
+  #contactButton:active {
+    transform: scale(0.85);
+    box-shadow: 0 0 40px #BBE7DC;
+  }
+
+
+  /* body content */
+#bodycontent{
+  display: flex;
+  height: 100vh;
+}
+
+#briefintro{
+  width: 25vw;
+  height: 65vh;
+  text-align: left;
+  padding: 7vw 5vw 0 7vw;
+}
+
+#briefintro h1{
+  font-family: "Italiana", serif;
+  font-size: 2rem;
+}
+
+#briefintro h3{
+  font-family: "Italiana", serif;
+  font-size: 1.2rem;
+}
+
+#briefintro p{
+  font-family: "Italiana", serif;
+  font-size: 1.2rem;
+  padding: 1vw 0;
+}
+
+#connectButton{
+  background-color: #8BDCFF;
+  color: white;
+  box-shadow: 0 0 30px 0 #8eddff, 0 0 10px #8eddff inset;
+  padding: 5px 10px;
+  border-radius: 2vw;
+  border-color: white;
+  width: 9.5vw;
+  height: 4vh;
+  font-size: 1rem;
+  font-family: 'Italiana', serif;
+  transition: 0.3s ease-out;
+} 
+
+#connectButton:hover{
+  color: white;
+  background-color:#BBE7DC;
+  border-color: white;
+  box-shadow: 0 0 80px white;
+  text-shadow: 0 0 5px rgb(187, 186, 186), 0 0 10px rgb(255, 255, 255);
+}
+
+#connectButton:active{
+  transform: scale(0.85);
+  box-shadow: 0 0 30px #BBE7DC;
+}
+
+/* horizontal scroll previews */
+#workpreviews{
+  border-radius: 21px;
+  width: 40vw;
+  height: 67vh;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 5vw 5vw 0vw 5vw;
+  scroll-behavior: smooth;
+  scrollbar-color:white #8BDCFF;
+}
+/* code for the card previews  */
+/* margin values= top right bottom left */
+.image-container{
+  background: #bbe7dc23;
+  box-shadow: 0px 4px 50px 0px #5baacc, 0px 0px 50px 0px #8eddff inset;
+  display: inline-block;
+  margin: 0 5vw 0 5vw;
+  width: 30vw;
+  height: 31vw;
+  border: 2px outset rgba(255, 255, 255, 0.808);
+  border-radius: 2vw;
+  overflow: hidden;
+  animation: moveContainers 5s;
+}
+
+/* code for image styling */
+#workpreviews img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4vw;
+  width: 25vw;
+  height: 15vw;
+  object-fit: cover;
+  padding: 2vw 2vw;
+}
+
+/* adjusting image positions */
+#vnssa-card img{
+  object-position: 0% 97.3%;
+}
+
+#cf-card img{
+  object-position: center left;
+}
+
+#cf-card svg{
+  display: none;
+}
+
+/* code for the body text inside the preview cards */
+.card-body{
+  padding: 0vw 2vw 2vw 2vw;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: 25vw;
+  height: 10vw;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+/* arrow */
+svg{
+  position: relative;
+  left: 24vw;
+  top: 2vh;
+  stroke-width: 1px;
+stroke: white;
+}
+/* number bottom left corner */
+.card-body h1{
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.2rem;
+  position: relative;
+  top: -1vh;
+  left: -1.6vw;
+}
+/* adjusting futura number and arrow */
+#futura-card h1{
+  position: relative;
+  top: 3vh;
+  left: -1.5vw;
+}
+
+#futura-card svg{
+  position: relative;
+  top: 6.5vh;
+}
+
+#cf-card h1{
+  position: relative;
+  top: 4vh;
+  left: -1.5vw;
+}
+
+@keyframes moveContainers {
+  0% {
+    margin: 0 2.5vw;
+  }
+  50% {
+    margin: 0 7vw;
+  }
+  100% {
+    margin: 0 5vw;
+  }
+}

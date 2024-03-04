@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 *{
     margin: 0;
@@ -7,41 +8,153 @@
 
 body{
     height: 100vh;
-    background: radial-gradient(190.3% 189.74% at -15.5% -42.84%, #E2B9E8 3.64%, #736BD6 47.96%, #8BDCFF 80.68%, #BBE7DC 97.36%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background: radial-gradient(190.3% 189.74% at -15.5% -42.84%, #E2B9E8 3.64%, #736BD6 47.96%, #8BDCFF 80.68%, #BBE7DC 97.36%); */
+    font-family: 'italiana', serif;
+    color: white;
+    animation: gradientChange 15s reverse infinite;
+    overflow: hidden;
 }
+
+/* create a keyframe animation that fades gradients.png into gradients1.png for the background*/
+
+@keyframes gradientChange {
+  0% {
+    background-image: url('../media/images/gradients.png');
+  }
+  7% {
+    background-image: url('../media/images/gradients1.png');
+  }
+  14% {
+    background-image: url('../media/images/gradients2.png');
+  }
+  21% {
+    background-image: url('../media/images/gradients3.png');
+  }
+  28% {
+    background-image: url('../media/images/gradients4.png');
+  }
+  35% {
+    background-image: url('../media/images/gradients5.png');
+  }
+  42% {
+    background-image: url('../media/images/gradients6.png');
+  }
+  49% {
+    background-image: url('../media/images/gradients7.png');
+  }
+  56% {
+    background-image: url('../media/images/gradients8.png');
+  }
+  63% {
+    background-image: url('../media/images/gradients9.png');
+  }
+  70% {
+    background-image: url('../media/images/gradients10.png');
+  }
+  77% {
+    background-image: url('../media/images/gradients11.png');
+  }
+  84% {
+    background-image: url('../media/images/gradients12.png');
+  }
+  91% {
+    background-image: url('../media/images/gradients13.png');
+  }
+  98% {
+    background-image: url('../media/images/gradients14.png');
+  }
+  100% {
+    background-image: url('../media/images/gradients15.png');
+  }
+}
+
 
 #enterbutton{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 100vh;
 }
 /* style the button */
-button{
-    display: block;
+  button{
     background-color: #8BDCFF;
     color: white;
-    box-shadow: 0 0 10px 0 #83ceef;
+    box-shadow: 0 0 40px 0 #8eddff, 0 0 20vw #8eddff inset;
     padding: 5px 10px;
     border-radius: 2vw;
     border-color: white;
-    cursor: pointer;
-    width: 5%;
-    height: 3%;
-    font-size: .5rem;
+    width: 6vw;
+    height: 4vh;
+    font-size: 1.1rem;
     font-family: 'Italiana', serif;
+    text-shadow: 0 0 5px rgb(214, 214, 214), 0 0 10px white;
+    transition: 0.3s ease-out;
 }
 
 #enterbutton button:hover{
-    background-color: #83ceef;
     color: white;
-    box-shadow: 0 0 10px 0 #8BDCFF;
+    background-color:#BBE7DC;
+    border-color: white;
+    box-shadow: 0 0 50px white;
 }
+
+#enterbutton button:active{
+    transform: scale(0.85);
+    box-shadow: 0 0 50px #BBE7DC;
+}
+
 
 #maintext{
     display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -22vh;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 1vh;
 }
 
+#name{
+    display: block;
+    font-family: 'Italiana', serif;
+    font-size: 6.5rem;
+}
+
+#title{
+    display: flex;
+    font-family: 'Italiana', serif;
+    font-size: 1.2rem;
+    justify-content: space-evenly;
+    width: 125%;
+}
+
+/*  circle following cursor code */
+#cursor {
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+  }
+  
+  #cursor-border {
+    --size: 50px;
+    position: fixed;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px white;
+    pointer-events: none;
+    transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+      height 0.15s ease-out, background-color 0.15s ease-out;
+    z-index: 999;
+  }
+  
